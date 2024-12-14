@@ -59,4 +59,53 @@ public class KeypadController : MonoBehaviour
             Debug.Log("eon");
         
     }
+
+    public string correctSequence = "2361"; // The correct memory game sequence
+    public string playerInput1 = ""; // To store player's input
+    [SerializeField] private TextMeshProUGUI Number9; // Reference to success message TMP text
+    [SerializeField] private float resetDelay = 1.0f; // Delay before resetting after a wrong input
+
+    // This function is called when a keypad button is pressed
+    public void AddNum(string digit)
+    {
+        playerInput1 += digit; // Append the digit to the input string
+        Debug.Log("Current Input: " + playerInput1);
+
+        // Check the sequence if the player has entered enough digits
+        if (playerInput1.Length == correctSequence.Length)
+        {
+            CheckSequence();
+        }
+    }
+
+    // This function checks if the player's input matches the correct sequence
+    public void CheckSequence()
+    {
+        if (playerInput1 == correctSequence)
+        {
+            Debug.Log("Sequence Correct!");
+            ShowSuccessMessage(); // Show success message
+        }
+        else
+        {
+            Debug.Log("Sequence Incorrect. Resetting...");
+            StartCoroutine(ResetInput()); // Reset after a delay
+        }
+    }
+
+    // Displays the success message
+    public void ShowSuccessMessage()
+    {
+        if (Number9 != null)
+        {
+            Number9.gameObject.SetActive(true); // Activate the success message text
+        }
+    }
+
+    public IEnumerator ResetInput()
+    {
+        yield return new WaitForSeconds(resetDelay); // Wait for the reset delay
+        playerInput1 = ""; // Clear the input
+        Debug.Log("Input Reset. Try Again.");
+    }
 }
