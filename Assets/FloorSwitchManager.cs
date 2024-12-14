@@ -5,82 +5,71 @@ using UnityEngine;
 
 public class FloorSwitchManager : MonoBehaviour
 {
-    public GameObject[] switches; // Array to hold floor switch objects
+    public List<FloorSwitch> floorSwitches; // List of switches in the correct order
+    private int currentStep = 0;            // Current switch to step on
+    public bool puzzleSolved = false;
     public Animator Door2; // Reference to the door's Animator
-    public int currentSwitchIndex = 0; // Tracks the correct order of switches
-    public Color transparentGreen = new Color(0f, 1f, 0f, 0.5f); // Transparent green
-    public Color transparentRed = new Color(1f, 0f, 0f, 0.5f); // Transparent red
-    private Animator currentAnim; // To keep track of the last activated switch's animator
 
-    void Start()
+    public Color initialColor = Color.red; // Color when the switch is reset or unpressed
+    public Color correctColor = Color.green; // Color when the switch is correctly pressed
+
+    private void Start()
     {
-        // Initialize switches (set all to red and reset animators)
-        for (int i = 0; i < switches.Length; i++)
+        // Set all switches to the initial color on start
+        foreach (FloorSwitch floorSwitch in floorSwitches)
         {
-            switches[i].GetComponentInChildren<Renderer>().material.color = transparentRed; // Set to red
-            // Ensure each switch gets its own Animator reset (if necessary)
-            Animator switchAnimator = switches[i].GetComponentInParent<Animator>();
-            if (switchAnimator != null)
-            {
-                switchAnimator.SetBool("isStep", false); // Reset the "step" state to false at the beginning
-            }
+            SetSwitchColor(floorSwitch, initialColor);
         }
     }
 
-    public void ActivateSwitch(GameObject switchTriggered)
+    public void OnSwitchPressed(FloorSwitch switchPressed)
     {
-        Debug.Log("Switch Activated");
+        if (puzzleSolved) return;
 
-        if (currentSwitchIndex < switches.Length)
+        if (floorSwitches[currentStep] == switchPressed)
         {
-            // Check if the triggered switch matches the next in the sequence
-            if (switchTriggered == switches[currentSwitchIndex])
+            Debug.Log("Correct Switch!");
+            currentStep++;
+
+            // Set the switch to the correct color
+            SetSwitchColor(switchPressed, correctColor);
+
+            // If all switches are stepped in the correct order
+            if (currentStep >= floorSwitches.Count)
             {
-                Animator anim = switchTriggered.GetComponentInParent<Animator>();
-                anim.SetBool("isStep", true); // Trigger the "step-down" animation for the current switch
-
-                // Correct switch triggered
-                switchTriggered.GetComponent<Renderer>().material.color = transparentGreen; // Set to green
-                currentSwitchIndex++;
-
-                // Update the current switch's animator
-                currentAnim = anim;
-
-                // Check if all switches have been triggered
-                if (currentSwitchIndex >= switches.Length)
-                {
-                    OpenDoor();
-                }
+                Door2.SetBool("isOpen", true);
+                puzzleSolved = true;
+                Debug.Log("Puzzle Solved!");
             }
-            else
-            {
-                // Wrong switch triggered, reset the sequence
-                ResetSwitches();
-            }
+        }
+        else
+        {
+            Debug.Log("Wrong Switch! Resetting...");
+            ResetPuzzle();
         }
     }
 
-    private void OpenDoor()
+    private void ResetPuzzle()
     {
-        Door2.SetBool("isOpen", true);
-        Debug.Log("Door Opened!");
-    }
+        if (puzzleSolved) return;
 
-    private void ResetSwitches()
-    {
-        currentSwitchIndex = 0;
-        for (int i = 0; i < switches.Length; i++)
+        currentStep = 0;
+
+        // Reset all switches to the initial color and position
+        foreach (FloorSwitch floorSwitch in floorSwitches)
         {
-            switches[i].GetComponentInChildren<Renderer>().material.color = transparentRed; // Reset to red
-            Animator anim = switches[i].GetComponentInParent<Animator>();
-            anim.SetBool("isStep", false); // Reset the "step-up" animation for all switches
+            SetSwitchColor(floorSwitch, initialColor);
+            floorSwitch.MoveSwitchTo(floorSwitch.raisedY);
         }
-        Debug.Log("Sequence Reset!");
     }
 
-    public void ResetSwitchAnim(GameObject switchTriggered)
+    private void SetSwitchColor(FloorSwitch floorSwitch, Color color)
     {
-        Animator anim = switchTriggered.GetComponentInParent<Animator>();
-        anim.SetBool("isStep", false); // Reset the "step-up" animation for the current switch
+        // Get the MeshRenderer of the switch and set its color
+        MeshRenderer renderer = floorSwitch.GetComponent<MeshRenderer>();
+        if (renderer != null)
+        {
+            renderer.material.color = color;
+        }
     }
 }
