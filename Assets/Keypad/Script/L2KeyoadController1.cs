@@ -87,6 +87,10 @@ public class L2KeyoadController1 : MonoBehaviour
         else
         {
             Debug.Log("Password Incorrect.");
+            if (audioSource != null && wrongSound != null)
+            {
+                audioSource.PlayOneShot(wrongSound);
+            }
             playerInput = ""; // Reset the input if incorrect
         }
     }
