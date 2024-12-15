@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - firstkey
+=======
+  - OilBarrel
+  - EscapeKey
+>>>>>>> level3
   layers:
   - Default
   - TransparentFX
