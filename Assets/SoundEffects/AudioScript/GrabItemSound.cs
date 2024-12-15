@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class GrabItemSound : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioSource grabSound;  // ????
+
+    private XRGrabInteractable grabInteractable;
+
+    void Awake()
     {
-        
+        grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable.selectEntered.AddListener(OnGrab);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnGrab(SelectEnterEventArgs args)
     {
-        
+        if (grabSound != null)
+        {
+            grabSound.Play();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        grabInteractable.selectEntered.RemoveListener(OnGrab);  // ????
     }
 }
