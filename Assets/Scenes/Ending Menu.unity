@@ -755,6 +755,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5175493577271173789, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175493577271173789, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175493577271173789, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175493577271173789, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175493577271173789, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6513246923580171445, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
       propertyPath: m_Text
       value: Start Game
