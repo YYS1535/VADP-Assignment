@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FloorSwitchManager : MonoBehaviour
 {
@@ -56,6 +57,7 @@ public class FloorSwitchManager : MonoBehaviour
                 }
                 puzzleSolved = true;
                 Debug.Log("Puzzle Solved!");
+                StartCoroutine(DelayedSceneTransition(2.5f)); // Add a delay of 2.5 second
             }
         }
         else
@@ -70,6 +72,14 @@ public class FloorSwitchManager : MonoBehaviour
 
             ResetPuzzle();
         }
+    }
+
+    // Coroutine to handle the delay
+    private IEnumerator DelayedSceneTransition(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified delay
+        //FadeOut();
+        SceneManager.LoadScene("VADP_Level3"); // Load the next scene
     }
 
     private void ResetPuzzle()

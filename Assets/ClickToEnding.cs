@@ -7,7 +7,6 @@ public class ClickToEnding : MonoBehaviour
     public Animator Pod; // Assign the door's Animator component in the Inspector
     public CanvasGroup fadeCanvasGroup; // Assign a UI CanvasGroup for fading effect
     public float fadeDuration = 3.0f; // Time for fade-out effect
-    public string nextSceneName = "FinalScene"; // The name of the scene to load after the animation
 
     public void EndingSceneAnimation()
     {
@@ -30,7 +29,7 @@ public class ClickToEnding : MonoBehaviour
         yield return StartCoroutine(FadeToBlack());
 
         // Load the next scene
-        SceneManager.LoadScene(nextSceneName);
+        SceneManager.LoadScene("Ending Menu");
     }
 
     private IEnumerator FadeToBlack()
