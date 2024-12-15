@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class keypadcontroller1 : MonoBehaviour
 {
-    public string correctPassword = "0371"; // Set the password here
+    public string correctPassword = "5371"; // Set the password here
     public string playerInput = ""; // To store player's input
     [SerializeField] private TextMeshProUGUI Pin; // Reference to the TMP text field
 

@@ -10,8 +10,11 @@ public class KeypadController : MonoBehaviour
     public string playerInput = ""; // To store player's input
     [SerializeField] private TextMeshProUGUI Pin; // Reference to the TMP text field
 
-
     public Animator Door1; // Assign the door's Animator component in the Inspector
+
+    // Audio components
+    public AudioSource audioSource; // Reference to the AudioSource component
+    public AudioClip correctPasswordSound; // Sound to play when password is correct
 
     // This function is called when a keypad button is pressed
     public void AddDigit(string digit)
@@ -27,12 +30,26 @@ public class KeypadController : MonoBehaviour
         if (playerInput == correctPassword)
         {
             Debug.Log("Password Correct!");
+            PlayCorrectPasswordSound(); // Play the sound effect
             OpenDoor(); // Trigger door animation
         }
         else
         {
             Debug.Log("Password Incorrect.");
             playerInput = ""; // Reset the input if incorrect
+        }
+    }
+
+    // Plays the correct password sound effect
+    private void PlayCorrectPasswordSound()
+    {
+        if (audioSource != null && correctPasswordSound != null)
+        {
+            audioSource.PlayOneShot(correctPasswordSound); // Play the sound effect
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource or CorrectPasswordSound is not set!");
         }
     }
 
@@ -51,12 +68,14 @@ public class KeypadController : MonoBehaviour
         playerInput = "";
         UpdatePinDisplay();
     }
+
     // Updates the PIN text display
     public void UpdatePinDisplay()
     {
-        
+        if (Pin != null)
+        {
             Pin.text = playerInput;
-            Debug.Log("eon");
-        
+        }
     }
 }
+

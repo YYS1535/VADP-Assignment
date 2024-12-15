@@ -1412,6 +1412,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d767d02172d1ad459fa5e291b1b5319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctPassword: 1234
+  playerInput: 
+  Pin: {fileID: 0}
+  Door1: {fileID: 0}
+  audioSource: {fileID: 0}
+  correctPasswordSound: {fileID: 0}
 --- !u!1 &68378957
 GameObject:
   m_ObjectHideFlags: 0

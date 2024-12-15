@@ -10,5 +10,8 @@ public class NextScene : MonoBehaviour
     {
         SceneManager.LoadScene("Environment");
     }
-
+    public void GoToNextScene1()
+    {
+        SceneManager.LoadScene("MainMenu2");
+    }
 }
