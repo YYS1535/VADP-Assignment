@@ -7,6 +7,7 @@ using TMPro;
 
 public class L2KeyoadController1 : MonoBehaviour
 {
+    private AudioSource audioSource; // Reference to the AudioSource
     public string correctPassword = "2120"; // Set the password here
     public string playerInput = ""; // To store player's input
     [SerializeField] private TextMeshProUGUI Pin; // Reference to the TMP text field
@@ -15,8 +16,18 @@ public class L2KeyoadController1 : MonoBehaviour
     private Renderer rend; // Renderer of the current GameObject
     [SerializeField] private GameObject targetObject; // Reference to the target GameObject
 
+    public AudioClip correctSound; // Sound for correct switch
+    public AudioClip wrongSound;   // Sound for wrong switch
+
     private void Start()
     {
+        // Get the AudioSource component
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("No AudioSource found on this GameObject. Please add one.");
+        }
+
         // Set the initial material for the target object
         if (targetObject != null)
         {
@@ -50,6 +61,10 @@ public class L2KeyoadController1 : MonoBehaviour
         if (playerInput == correctPassword)
         {
             Debug.Log("Password Correct!");
+            if (audioSource != null && correctSound != null)
+            {
+                audioSource.PlayOneShot(correctSound);
+            }
 
             // Change the material of the target object
             if (targetObject != null)

@@ -13,6 +13,10 @@ public class FloorSwitchManager : MonoBehaviour
     public Color initialColor = Color.red; // Color when the switch is reset or unpressed
     public Color correctColor = Color.green; // Color when the switch is correctly pressed
 
+    public AudioClip correctSound; // Sound for correct switch
+    public AudioClip wrongSound;   // Sound for wrong switch
+    public AudioClip openDoorSound;
+
     private void Start()
     {
         // Set all switches to the initial color on start
@@ -26,6 +30,8 @@ public class FloorSwitchManager : MonoBehaviour
     {
         if (puzzleSolved) return;
 
+        AudioSource audioSource = switchPressed.GetComponent<AudioSource>();
+
         if (floorSwitches[currentStep] == switchPressed)
         {
             Debug.Log("Correct Switch!");
@@ -34,10 +40,20 @@ public class FloorSwitchManager : MonoBehaviour
             // Set the switch to the correct color
             SetSwitchColor(switchPressed, correctColor);
 
+            // Play the correct sound
+            if (audioSource != null && correctSound != null)
+            {
+                audioSource.PlayOneShot(correctSound);
+            }
+
             // If all switches are stepped in the correct order
             if (currentStep >= floorSwitches.Count)
             {
                 Door2.SetBool("isOpen", true);
+                if (audioSource != null && openDoorSound != null)
+                {
+                    audioSource.PlayOneShot(openDoorSound);
+                }
                 puzzleSolved = true;
                 Debug.Log("Puzzle Solved!");
             }
@@ -45,6 +61,13 @@ public class FloorSwitchManager : MonoBehaviour
         else
         {
             Debug.Log("Wrong Switch! Resetting...");
+
+            // Play the wrong sound
+            if (audioSource != null && wrongSound != null)
+            {
+                audioSource.PlayOneShot(wrongSound);
+            }
+
             ResetPuzzle();
         }
     }

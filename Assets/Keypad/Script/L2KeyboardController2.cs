@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class L2KeyboardController2 : MonoBehaviour
 {
+    private AudioSource audioSource; // Reference to the AudioSource
     public string correctPassword = "2149"; // Set the password here
     public string playerInput = ""; // To store player's input
     [SerializeField] private TextMeshProUGUI Pin; // Reference to the TMP text field
@@ -13,8 +14,16 @@ public class L2KeyboardController2 : MonoBehaviour
     private Renderer rend; // Renderer of the current GameObject
     [SerializeField] private GameObject targetObject; // Reference to the target GameObject
 
+    public AudioClip correctSound; // Sound for correct switch
+    public AudioClip wrongSound;   // Sound for wrong switch
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("No AudioSource found on this GameObject. Please add one.");
+        }
         // Set the initial material for the target object
         if (targetObject != null)
         {
@@ -48,7 +57,10 @@ public class L2KeyboardController2 : MonoBehaviour
         if (playerInput == correctPassword)
         {
             Debug.Log("Password Correct!");
-
+            if (audioSource != null && correctSound != null)
+            {
+                audioSource.PlayOneShot(correctSound);
+            }
             // Change the material of the target object
             if (targetObject != null)
             {
@@ -70,6 +82,10 @@ public class L2KeyboardController2 : MonoBehaviour
         else
         {
             Debug.Log("Password Incorrect.");
+            if (audioSource != null && wrongSound != null)
+            {
+                audioSource.PlayOneShot(wrongSound);
+            }
             playerInput = ""; // Reset the input if incorrect
         }
     }
