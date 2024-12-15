@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class KeypadController : MonoBehaviour
+public class keypadcontroller1 : MonoBehaviour
 {
-    public string correctPassword = "1234"; // Set the password here
+    public string correctPassword = "0371"; // Set the password here
     public string playerInput = ""; // To store player's input
     [SerializeField] private TextMeshProUGUI Pin; // Reference to the TMP text field
 
@@ -54,10 +54,10 @@ public class KeypadController : MonoBehaviour
     // Updates the PIN text display
     public void UpdatePinDisplay()
     {
-        
-            Pin.text = playerInput;
-            Debug.Log("eon");
-        
+
+        Pin.text = playerInput;
+        Debug.Log("eon");
+
     }
 
 }

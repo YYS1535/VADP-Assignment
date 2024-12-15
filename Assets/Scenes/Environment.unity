@@ -1395,14 +1395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d767d02172d1ad459fa5e291b1b5319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctPassword: 1234
-  playerInput: 
-  Pin: {fileID: 0}
-  Door1: {fileID: 59595493}
-  correctSequence: 2361
-  playerInput1: 
-  Number9: {fileID: 0}
-  resetDelay: 1
 --- !u!1 &68378957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185060290}
-  - component: {fileID: 185060289}
+  - component: {fileID: 185060291}
   m_Layer: 0
   m_Name: Numbtn Manager
   m_TagString: Untagged
@@ -1870,26 +1862,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &185060289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185060288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d767d02172d1ad459fa5e291b1b5319, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctPassword: 
-  playerInput: 
-  Pin: {fileID: 0}
-  Door1: {fileID: 0}
-  correctSequence: 2361
-  playerInput1: 
-  Number9: {fileID: 0}
-  resetDelay: 1
 --- !u!4 &185060290
 Transform:
   m_ObjectHideFlags: 0
@@ -1898,13 +1870,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185060288}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.4403371, z: -0, w: 0.8978326}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6151689, y: 0.61516887, z: 0.6151689}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1131678456}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185060291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185060288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e07876054589b44bbceb02db32001ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctSequence: 2351
+  Number3Panel: {fileID: 391521497}
+  targetObject: {fileID: 391521497}
+  resetDelay: 1
 --- !u!1 &210241719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,6 +2391,85 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &391521497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 391521499}
+  - component: {fileID: 391521498}
+  m_Layer: 5
+  m_Name: Nmber3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &391521498
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391521497}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!224 &391521499
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391521497}
+  m_LocalRotation: {x: 0.06679859, y: 0.91517353, z: -0.39376608, w: 0.05425518}
+  m_LocalPosition: {x: 0, y: 0, z: -5.076}
+  m_LocalScale: {x: 0.12289419, y: 0.15398914, z: 0.018432511}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1267626977}
+  m_Father: {fileID: 1131678456}
+  m_LocalEulerAnglesHint: {x: 46.717, y: 228.345, z: 6.662}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.089, y: 2.153}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &501598699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -669346976464020718, guid: 08ceda725d00a5543b4ad82691486929, type: 3}
@@ -2613,8 +2680,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 540418439}
-        m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
+      - m_Target: {fileID: 185060291}
+        m_TargetAssemblyTypeName: MemoryButton, Assembly-CSharp
         m_MethodName: AddNum
         m_Mode: 5
         m_Arguments:
@@ -2672,7 +2739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 540418440}
-  - component: {fileID: 540418439}
+  - component: {fileID: 540418441}
   m_Layer: 0
   m_Name: ButtonScript
   m_TagString: Untagged
@@ -2680,26 +2747,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &540418439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540418438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d767d02172d1ad459fa5e291b1b5319, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctPassword: 1234
-  playerInput: 
-  Pin: {fileID: 949819828}
-  Door1: {fileID: 59595493}
-  correctSequence: 
-  playerInput1: 
-  Number9: {fileID: 0}
-  resetDelay: 1
 --- !u!4 &540418440
 Transform:
   m_ObjectHideFlags: 0
@@ -2715,6 +2762,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2084866113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540418441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540418438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6a7cc35abb7be4597514f322f5754d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctPassword: 0371
+  playerInput: 
+  Pin: {fileID: 949819828}
+  Door1: {fileID: 59595493}
 --- !u!1 &573199735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,6 +2861,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573199735}
   m_Mesh: {fileID: -4053388958407510632, guid: 08ceda725d00a5543b4ad82691486929, type: 3}
+--- !u!1 &591419676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 591419677}
+  - component: {fileID: 591419678}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &591419677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591419676}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 1.581, y: -0.8460001, z: -1.479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2084866113}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591419678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591419676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c103cfc0cb02ee5439af12f0eaae452b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &630641349
 GameObject:
   m_ObjectHideFlags: 0
@@ -3942,24 +4049,40 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ClearInput
       objectReference: {fileID: 0}
     - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 596421039049535319, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3990,24 +4113,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1483175290718675653, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4022,24 +4165,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1554878834120976762, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4094,24 +4257,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2172748134618443160, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4126,24 +4309,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2432652218419782978, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4174,24 +4377,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3278925759483829190, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4210,24 +4433,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4656243137608322786, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4242,24 +4485,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5207364609397119946, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4274,24 +4537,40 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CheckPassword
       objectReference: {fileID: 0}
     - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5315058547820506487, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4306,24 +4585,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6841667165268056387, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4338,24 +4637,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8928213850753621625, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4370,24 +4689,44 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 540418441}
+    - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 540418439}
+      objectReference: {fileID: 591419678}
     - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDigit
       objectReference: {fileID: 0}
     - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Clicky
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: keypadcontroller1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: KeypadController, Assembly-CSharp
+      value: Playsound1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9197882754192022572, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4401,12 +4740,16 @@ PrefabInstance:
     - {fileID: 2467814227423501158, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
     - {fileID: 6326765411790091855, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
     - {fileID: 3271352788951808518, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+    - {fileID: 4683972457873982570, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6173201543053088092, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1894775566215805748, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
       insertIndex: 0
       addedObject: {fileID: 540418440}
+    - targetCorrespondingSourceObject: {fileID: 1894775566215805748, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 591419677}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04d527825c10d124a8b7f6f293acf8a7, type: 3}
 --- !u!1 &890417487
@@ -4852,8 +5195,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 540418439}
-        m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
+      - m_Target: {fileID: 185060291}
+        m_TargetAssemblyTypeName: MemoryButton, Assembly-CSharp
         m_MethodName: AddNum
         m_Mode: 5
         m_Arguments:
@@ -5709,7 +6052,8 @@ Transform:
   m_LocalScale: {x: 0.6151689, y: 0.61516887, z: 0.6151689}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 185060290}
+  - {fileID: 1738088494}
+  - {fileID: 391521499}
   - {fileID: 282777560}
   - {fileID: 1234531840}
   - {fileID: 971279150}
@@ -6052,6 +6396,116 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234531839}
   m_Mesh: {fileID: -5757893382660879751, guid: 08ceda725d00a5543b4ad82691486929, type: 3}
+--- !u!1 &1267626976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267626977}
+  - component: {fileID: 1267626980}
+  - component: {fileID: 1267626979}
+  - component: {fileID: 1267626978}
+  m_Layer: 5
+  m_Name: Number3Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1267626977
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267626976}
+  m_LocalRotation: {x: -0.01348836, y: 0.846512, z: -0.531908, w: -0.017590724}
+  m_LocalPosition: {x: 0, y: 0, z: -8.93}
+  m_LocalScale: {x: 0.11104497, y: 0.14416932, z: 0.14416932}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 391521499}
+  m_LocalEulerAnglesHint: {x: 64.291, y: 182.039, z: -0.545}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -9.653, y: -0.03}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!64 &1267626978
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267626976}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1267626979
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267626976}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ba624da88fa039f4283518349abc344b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1267626980
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267626976}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1274567387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7008,7 +7462,7 @@ Transform:
   m_GameObject: {fileID: 1440521434}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.74207103, z: -0, w: 0.67032135}
-  m_LocalPosition: {x: -0.8000001, y: 0.4, z: 0.08000035}
+  m_LocalPosition: {x: -0.8000001, y: 0.6, z: 0.08000035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7345,8 +7799,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 540418439}
-        m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
+      - m_Target: {fileID: 185060291}
+        m_TargetAssemblyTypeName: MemoryButton, Assembly-CSharp
         m_MethodName: AddNum
         m_Mode: 5
         m_Arguments:
@@ -8205,8 +8659,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 540418439}
-        m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
+      - m_Target: {fileID: 185060291}
+        m_TargetAssemblyTypeName: MemoryButton, Assembly-CSharp
         m_MethodName: AddNum
         m_Mode: 5
         m_Arguments:
@@ -8417,6 +8871,115 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660000956}
   m_Mesh: {fileID: -1630059908136232232, guid: 08ceda725d00a5543b4ad82691486929, type: 3}
+--- !u!1 &1738088493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1738088494}
+  - component: {fileID: 1738088497}
+  - component: {fileID: 1738088496}
+  - component: {fileID: 1738088495}
+  m_Layer: 5
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1738088494
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738088493}
+  m_LocalRotation: {x: 0.07409488, y: 0.9160228, z: -0.39245856, w: 0.037261333}
+  m_LocalPosition: {x: 0, y: 0, z: -4.795}
+  m_LocalScale: {x: 0.15138797, y: 0.18991482, z: 0.022910248}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1131678456}
+  m_LocalEulerAnglesHint: {x: 0, y: 2.127, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.072, y: 2.166}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &1738088495
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738088493}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1738088496
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738088493}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -494391370459312041, guid: 08ceda725d00a5543b4ad82691486929, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1738088497
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738088493}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1769143230
 GameObject:
   m_ObjectHideFlags: 0
@@ -9073,8 +9636,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 540418439}
-        m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
+      - m_Target: {fileID: 185060291}
+        m_TargetAssemblyTypeName: MemoryButton, Assembly-CSharp
         m_MethodName: AddNum
         m_Mode: 5
         m_Arguments:
@@ -9495,8 +10058,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 540418439}
-        m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
+      - m_Target: {fileID: 185060291}
+        m_TargetAssemblyTypeName: MemoryButton, Assembly-CSharp
         m_MethodName: AddNum
         m_Mode: 5
         m_Arguments:
@@ -9555,6 +10118,7 @@ SceneRoots:
   - {fileID: 630854145}
   - {fileID: 655548921}
   - {fileID: 1274567387}
+  - {fileID: 185060290}
   - {fileID: 1131678456}
   - {fileID: 1470156618}
   - {fileID: 909231595}
