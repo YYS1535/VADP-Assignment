@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    public void goToNextScene()
+    public void GoToNextScene()
     {
         SceneManager.LoadScene("Environment");
     }

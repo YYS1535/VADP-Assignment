@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class keypadcontroller1 : MonoBehaviour
 {
@@ -28,12 +29,21 @@ public class keypadcontroller1 : MonoBehaviour
         {
             Debug.Log("Password Correct!");
             OpenDoor(); // Trigger door animation
+            StartCoroutine(DelayedSceneTransition(2.5f)); // Add a delay of 2.5 second
         }
         else
         {
             Debug.Log("Password Incorrect.");
             playerInput = ""; // Reset the input if incorrect
         }
+    }
+
+    // Coroutine to handle the delay
+    private IEnumerator DelayedSceneTransition(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified delay
+        //FadeOut();
+        SceneManager.LoadScene("level_2"); // Load the next scene
     }
 
     // Opens the door by triggering the animation
