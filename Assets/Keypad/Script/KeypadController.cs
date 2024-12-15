@@ -93,15 +93,6 @@ public class KeypadController : MonoBehaviour
         }
     }
 
-    // Displays the success message
-    public void ShowSuccessMessage()
-    {
-        if (Number9 != null)
-        {
-            Number9.gameObject.SetActive(true); // Activate the success message text
-        }
-    }
-
     public IEnumerator ResetInput()
     {
         yield return new WaitForSeconds(resetDelay); // Wait for the reset delay
