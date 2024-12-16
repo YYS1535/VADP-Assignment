@@ -2831,7 +2831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6a7cc35abb7be4597514f322f5754d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctPassword: 0371
+  correctPassword: 5371
   playerInput: 
   Pin: {fileID: 949819828}
   Door1: {fileID: 59595493}
